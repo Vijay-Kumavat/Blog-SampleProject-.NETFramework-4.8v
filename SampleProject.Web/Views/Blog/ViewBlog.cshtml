@@ -1,0 +1,10 @@
+﻿@model SampleProject.Web.Models.Blog.ViewBlogModel
+@{
+    ViewBag.Title = "ViewBlog";
+}
+
+<h1>@Model.Title</h1>
+<img src="@Model.ThumbnailUrl" style="float: right; margin: 0 0 20px 30px;" alt="Blog Image" />
+<p>
+    @Html.Raw(Model.Content.Replace("\n", "<br/>"))
+</p>

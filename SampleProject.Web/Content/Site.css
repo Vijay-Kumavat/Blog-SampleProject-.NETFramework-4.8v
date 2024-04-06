@@ -1,0 +1,75 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.section{
+    margin: 25px;
+}
+
+.container-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.blog-card .row {
+    display: flex;
+    margin-inline: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.grid-col:hover {
+    border: 1px dotted;
+}
+
+.blog-card .row .col-4 img {
+    width: 140px;
+    height: 140px;
+    margin-right: 15px;
+}
+
+
+    .blog-card .row .col-8 {
+        margin-top: 1px;
+        margin-right: 20px;
+    }
+
+.blog-card .blog-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.count-img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.blog-view-count{
+    font-weight: bold;
+}
+
+.blog-count-section {
+    justify-content: space-between;
+}

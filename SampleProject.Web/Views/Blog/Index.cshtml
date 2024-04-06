@@ -1,0 +1,39 @@
+﻿@model SampleProject.Web.Models.Blog.BlogListModel
+
+@{
+    ViewBag.Title = "All Blog";
+}
+
+<div class="section">
+    <div class="row">
+        <div class="container-section">
+            @foreach (var blog in Model.Blog)
+            {
+                <div class="grid-col">
+                    <div class="blog-card">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="@blog.ThumbnailUrl" />
+                            </div>
+                            <div class="col-8">
+                                <div class="blog-title">@blog.Title</div>
+                                @{
+                                    string desc = blog.Description.Count() > 120 ? blog.Description.Substring(0, 120) + "....." : blog.Description;
+                                                                <div class="blog-description">@desc @Html.ActionLink(" read more", "ViewBlog", "Blog", new { blogId = blog.Id }, null)</div>
+                                }
+                            <div class="row blog-count-section">
+                                <div class="col-6">
+                                    <div class="blog-view-count"><img class="count-img" src="~/fonts/countdown.png" />@blog.ViewCount</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="blog-view-count"><img class="count-img" src="~/fonts/writer.png" />@blog.PersonName</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

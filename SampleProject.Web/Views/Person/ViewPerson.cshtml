@@ -1,0 +1,10 @@
+﻿@model SampleProject.Web.Models.Person.ViewPersonModel
+@{
+    ViewBag.Title = "Person: " + Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<img src="@Model.ImageUrl" style="float: right; margin: 0 0 20px 30px;" alt="Person Image" />
+<p>
+    @Html.Raw(Model.Description.Replace("\n", "<br/>"))
+</p>
